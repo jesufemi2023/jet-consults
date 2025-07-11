@@ -48,10 +48,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" 
                 alt="Jet Consults Logo" 
-                className="h-10 w-auto filter brightness-0 saturate-100"
-                style={{
-                  filter: 'hue-rotate(220deg) brightness(0.8) saturate(1.5)'
-                }}
+                className="h-10 w-auto bg-white rounded-md p-1"
               />
             </div>
             <nav className="hidden md:flex space-x-8">
