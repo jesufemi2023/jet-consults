@@ -5,34 +5,26 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const Index = () => {
   const services = [{
     icon: <Code className="h-8 w-8" />,
-    title: "Website Development",
-    description: "Professional, responsive websites built with modern technologies to elevate your online presence."
+    title: "Website & Web App Development",
+    description: "We build professional, responsive websites and powerful web applications using modern technologies to elevate your online presence."
   }, {
     icon: <Smartphone className="h-8 w-8" />,
     title: "Mobile App Development",
-    description: "Native and cross-platform mobile applications for iOS and Android to reach your customers anywhere."
+    description: "We create native and cross-platform mobile applications for iOS and Android to reach your customers anywhere."
   }, {
     icon: <Monitor className="h-8 w-8" />,
     title: "Desktop Applications",
-    description: "Custom desktop software solutions tailored to your business needs and workflow requirements."
+    description: "We develop custom desktop software solutions tailored to your business needs and workflow requirements."
   }, {
     icon: <Shield className="h-8 w-8" />,
-    title: "Security Systems Installation",
-    description: "Professional camera and computer installation services for hotels, offices, and commercial spaces."
-  }, {
-    icon: <Shield className="h-8 w-8" />,
-    title: "Cybersecurity Solutions",
-    description: "Comprehensive security assessments, threat detection, and protection systems to safeguard your digital assets."
-  }, {
-    icon: <BarChart3 className="h-8 w-8" />,
-    title: "Data Analysis",
-    description: "Transform your data into actionable insights with advanced analytics and business intelligence solutions."
+    title: "Camera & Computer Installation",
+    description: "We install professional camera systems and computer setups for hotels, offices, and commercial spaces."
   }, {
     icon: <GraduationCap className="h-8 w-8" />,
     title: "IT Training Programs",
-    description: "Comprehensive coding bootcamps in Python, JavaScript, SQL, Django, React.js, AI, and more for children, youth, and adults."
+    description: "Comprehensive coding bootcamps in Python, JavaScript, SQL, Django, React.js, AI, Cybersecurity, Data Analysis, and more for children, youth, and adults."
   }];
-  const trainingCourses = ["Python Programming", "JavaScript Development", "SQL Database Management", "Django Framework", "React.js Frontend", "Artificial Intelligence", "Web Development", "Mobile App Development"];
+  const trainingCourses = ["Python Programming", "JavaScript Development", "SQL Database Management", "Django Framework", "React.js Frontend", "Artificial Intelligence", "Web Development", "Mobile App Development", "Cybersecurity", "Data Analysis"];
   const handleWhatsAppContact = () => {
     window.open('https://wa.me/2347060737554', '_blank');
   };
