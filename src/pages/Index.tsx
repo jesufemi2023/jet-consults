@@ -41,23 +41,23 @@ const Index = () => {
   };
   return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+      <header className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" 
                 alt="Jet Consults Logo" 
-                className="h-10 w-auto filter brightness-0 saturate-100"
+                className="h-10 w-auto brightness-0 invert"
                 style={{
-                  filter: 'hue-rotate(220deg) brightness(0.8) saturate(1.5)'
+                  filter: 'brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(220deg) brightness(0.9)'
                 }}
               />
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
-              <a href="#training" className="text-gray-700 hover:text-blue-600 transition-colors">Training</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+              <a href="#services" className="text-gray-300 hover:text-blue-400 transition-colors">Services</a>
+              <a href="#training" className="text-gray-300 hover:text-blue-400 transition-colors">Training</a>
+              <a href="#contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
             </nav>
           </div>
         </div>
