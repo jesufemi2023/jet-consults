@@ -91,6 +91,61 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-4xl font-bold mb-6">Why Choose Jet Consult?</h3>
+          <p className="text-xl mb-8 max-w-4xl mx-auto leading-relaxed">
+            With over 5 years of experience in the tech industry, we've successfully delivered 200+ projects and trained 500+ students. 
+            From small businesses to large enterprises, we provide cutting-edge solutions that drive real results. 
+            Our expert team combines technical excellence with personalized service to ensure your success.
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">200+</div>
+              <p className="text-lg">Successful Projects</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">500+</div>
+              <p className="text-lg">Students Trained</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">5+</div>
+              <p className="text-lg">Years Experience</p>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 max-w-4xl mx-auto">
+            <h4 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h4>
+            <p className="text-lg mb-6">
+              Don't let your competitors get ahead. Contact us today for a FREE consultation and discover how we can elevate your business to the next level.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button onClick={handleWhatsAppContact} className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+                <Phone className="mr-2 h-5 w-5" />
+                WhatsApp: 07060737554
+              </Button>
+              <Button 
+                onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} 
+                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us Now
+              </Button>
+              <Button 
+                onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} 
+                className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <MapPin className="mr-2 h-5 w-5" />
+                Visit Our Office
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
