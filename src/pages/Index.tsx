@@ -118,9 +118,12 @@ const Index = () => {
           </div>
 
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-8 max-w-4xl mx-auto">
-            <h4 className="text-2xl font-bold mb-4 text-center">Ready to Transform Your Business?</h4>
-            <p className="text-lg mb-6 text-center">
-              Don't let your competitors get ahead. Contact us today for a FREE consultation and discover how we can elevate your business to the next level.
+            <h4 className="text-2xl font-bold mb-4 text-center">Need Professional IT Solutions?</h4>
+            <p className="text-lg mb-4 text-center">
+              Get custom websites, web apps, desktop applications, or professional camera & computer installations for your business.
+            </p>
+            <p className="text-base mb-6 text-center opacity-90">
+              Contact us today for a FREE consultation and discover how we can elevate your business to the next level.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
