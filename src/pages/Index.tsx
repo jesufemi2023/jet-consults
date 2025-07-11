@@ -91,34 +91,35 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-4xl font-bold mb-6">Why Choose Jet Consult?</h3>
-          <p className="text-xl mb-8 max-w-4xl mx-auto leading-relaxed">
-            With over 5 years of experience in the tech industry, we've successfully delivered 200+ projects and trained 500+ students. 
-            From small businesses to large enterprises, we provide cutting-edge solutions that drive real results. 
-            Our expert team combines technical excellence with personalized service to ensure your success.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">200+</div>
-              <p className="text-lg">Successful Projects</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <p className="text-lg">Students Trained</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">5+</div>
-              <p className="text-lg">Years Experience</p>
-            </div>
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive IT solutions tailored to meet your business needs and drive digital transformation.
+            </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 max-w-4xl mx-auto">
-            <h4 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h4>
-            <p className="text-lg mb-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {services.map((service, index) => <Card key={index} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
+                <CardHeader className="text-center pb-4">
+                  <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl font-bold text-gray-900">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-600 text-center leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>)}
+          </div>
+
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-8 max-w-4xl mx-auto">
+            <h4 className="text-2xl font-bold mb-4 text-center">Ready to Transform Your Business?</h4>
+            <p className="text-lg mb-6 text-center">
               Don't let your competitors get ahead. Contact us today for a FREE consultation and discover how we can elevate your business to the next level.
             </p>
             
@@ -142,34 +143,6 @@ const Index = () => {
                 Visit Our Office
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive IT solutions tailored to meet your business needs and drive digital transformation.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => <Card key={index} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
-                  </div>
-                  <CardTitle className="text-xl font-bold text-gray-900">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600 text-center leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>)}
           </div>
         </div>
       </section>
