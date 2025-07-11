@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, ExternalLink, Code, Smartphone, Monitor, Shield, GraduationCap } from 'lucide-react';
+import { Phone, Mail, MapPin, ExternalLink, Code, Smartphone, Monitor, Shield, GraduationCap, BarChart3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 const Index = () => {
@@ -20,9 +20,17 @@ const Index = () => {
     title: "Security Systems Installation",
     description: "Professional camera and computer installation services for hotels, offices, and commercial spaces."
   }, {
+    icon: <Shield className="h-8 w-8" />,
+    title: "Cybersecurity Solutions",
+    description: "Comprehensive security assessments, threat detection, and protection systems to safeguard your digital assets."
+  }, {
+    icon: <BarChart3 className="h-8 w-8" />,
+    title: "Data Analysis",
+    description: "Transform your data into actionable insights with advanced analytics and business intelligence solutions."
+  }, {
     icon: <GraduationCap className="h-8 w-8" />,
     title: "IT Training Programs",
-    description: "Comprehensive coding bootcamps in Python, JavaScript, SQL, Django, React.js, AI, and more."
+    description: "Comprehensive coding bootcamps in Python, JavaScript, SQL, Django, React.js, AI, and more for children, youth, and adults."
   }];
   const trainingCourses = ["Python Programming", "JavaScript Development", "SQL Database Management", "Django Framework", "React.js Frontend", "Artificial Intelligence", "Web Development", "Mobile App Development"];
   const handleWhatsAppContact = () => {
@@ -36,13 +44,15 @@ const Index = () => {
       <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg">
-                <Code className="h-6 w-6" />
-              </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Jet Consult
-              </h1>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" 
+                alt="Jet Consults Logo" 
+                className="h-10 w-auto filter brightness-0 saturate-100"
+                style={{
+                  filter: 'hue-rotate(220deg) brightness(0.8) saturate(1.5)'
+                }}
+              />
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
@@ -126,7 +136,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h3 className="text-4xl font-bold text-gray-900 mb-4">IT Training Programs</h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Master in-demand technologies with our comprehensive training courses designed for beginners to advanced learners.
+              Master in-demand technologies with our comprehensive training courses designed for children, youth, and adults - from beginners to advanced learners.
             </p>
           </div>
 
