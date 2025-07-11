@@ -178,9 +178,7 @@ const Index = () => {
               <Mail className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h4 className="text-xl font-semibold mb-2">Email</h4>
               <p className="text-gray-300 mb-4">Send us your project details</p>
-              <a href="mailto:ogungbetemitope@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors">
-                ogungbetemitope@gmail.com
-              </a>
+              <a href="mailto:ogungbetemitope@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors">jesufemitemitope@gmail.com</a>
             </div>
 
             <div className="text-center p-8 bg-gray-800 rounded-xl hover:bg-gray-700 transition-colors duration-300">
