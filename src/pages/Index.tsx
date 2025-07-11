@@ -37,7 +37,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
-              <img src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" alt="Jet Consults Logo" className="h-10 w-auto bg-white rounded-md p-1" />
+              <img 
+                src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" 
+                alt="Jet Consults Logo" 
+                className="h-10 w-auto bg-white rounded-md p-1"
+              />
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
@@ -97,7 +101,20 @@ const Index = () => {
             Our expert team combines technical excellence with personalized service to ensure your success.
           </p>
           
-          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">200+</div>
+              <p className="text-lg">Successful Projects</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">500+</div>
+              <p className="text-lg">Students Trained</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">5+</div>
+              <p className="text-lg">Years Experience</p>
+            </div>
+          </div>
 
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 max-w-4xl mx-auto">
             <h4 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h4>
@@ -110,11 +127,17 @@ const Index = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 WhatsApp: 07060737554
               </Button>
-              <Button onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+              <Button 
+                onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} 
+                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us Now
               </Button>
-              <Button onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+              <Button 
+                onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} 
+                className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
                 <MapPin className="mr-2 h-5 w-5" />
                 Visit Our Office
               </Button>
