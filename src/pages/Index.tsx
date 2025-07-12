@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import heroImage from '@/assets/hero-professional-consulting.jpg';
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
   const services = [{
     icon: <Code className="h-8 w-8" />,
     title: "Website & Web App Development",
@@ -51,44 +50,26 @@ const Index = () => {
             </nav>
             
             {/* Mobile Menu Button */}
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
-              aria-label="Toggle menu"
-            >
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
         
         {/* Mobile Navigation Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md">
+        {isMenuOpen && <div className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md">
             <nav className="max-w-7xl mx-auto px-4 py-4 space-y-3">
-              <a 
-                href="#services" 
-                className="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
+              <a href="#services" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Services
               </a>
-              <a 
-                href="#training" 
-                className="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
+              <a href="#training" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Training
               </a>
-              <a 
-                href="#contact" 
-                className="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
+              <a href="#contact" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </a>
             </nav>
-          </div>
-        )}
+          </div>}
       </header>
 
       {/* Hero Section */}
@@ -148,18 +129,11 @@ const Index = () => {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={handleTrainingRegistration} 
-                  className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
+                <Button onClick={handleTrainingRegistration} className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                   Start Your Journey
                   <ExternalLink className="ml-2 h-5 w-5" />
                 </Button>
-                <Button 
-                  onClick={handleWhatsAppContact} 
-                  variant="outline" 
-                  className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:border-white/50"
-                >
+                <Button onClick={handleWhatsAppContact} variant="outline" className="border-2 border-white/30 hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:border-white/50 text-indigo-200">
                   Free Consultation
                   <Phone className="ml-2 h-5 w-5" />
                 </Button>
@@ -170,11 +144,7 @@ const Index = () => {
             <div className="relative lg:pl-8">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-3xl transform rotate-6 scale-105 blur-lg"></div>
               <div className="relative">
-                <img 
-                  src={heroImage} 
-                  alt="Professional IT Consulting Services" 
-                  className="relative rounded-3xl shadow-2xl w-full h-[600px] object-cover transform hover:scale-105 transition-all duration-700 border border-white/10"
-                />
+                <img src={heroImage} alt="Professional IT Consulting Services" className="relative rounded-3xl shadow-2xl w-full h-[600px] object-cover transform hover:scale-105 transition-all duration-700 border border-white/10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent rounded-3xl"></div>
                 
                 {/* Floating Elements */}
