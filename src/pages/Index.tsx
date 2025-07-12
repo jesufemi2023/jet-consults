@@ -91,40 +91,126 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
-              <div className="space-y-4">
-                <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Transform Your
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    {" "}Digital Future
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Content */}
+            <div className="space-y-8 text-white">
+              <div className="space-y-6">
+                <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                  <span className="text-sm font-medium text-blue-300">🚀 Leading IT Solutions Provider</span>
+                </div>
+                
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+                  <span className="block">Transform Your</span>
+                  <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-blue-300 bg-clip-text text-transparent">
+                    Digital Future
                   </span>
-                </h2>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  Professional IT solutions and comprehensive training programs designed to elevate your business and career in the digital age.
+                  <span className="block text-3xl sm:text-4xl lg:text-5xl text-gray-300 font-normal mt-2">
+                    with Expert IT Solutions
+                  </span>
+                </h1>
+                
+                <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
+                  Empower your business with cutting-edge technology solutions and comprehensive training programs. From web development to AI implementation, we're your trusted partner in digital transformation.
                 </p>
               </div>
               
+              {/* Stats */}
+              <div className="flex flex-wrap gap-8 py-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-400">500+</div>
+                  <div className="text-sm text-gray-400">Projects Completed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400">1000+</div>
+                  <div className="text-sm text-gray-400">Students Trained</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-400">5+</div>
+                  <div className="text-sm text-gray-400">Years Experience</div>
+                </div>
+              </div>
+              
+              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={handleTrainingRegistration} className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Register for Training
-                  <ExternalLink className="ml-2 h-5 w-5" />
+                <Button 
+                  onClick={handleTrainingRegistration} 
+                  className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+                >
+                  <span>Start Your Journey</span>
+                  <ExternalLink className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button onClick={handleWhatsAppContact} variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-300">
-                  Get Free Consultation
-                  <Phone className="ml-2 h-5 w-5" />
+                <Button 
+                  onClick={handleWhatsAppContact} 
+                  variant="outline" 
+                  className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-md px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:border-white/50"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  <span>Free Consultation</span>
                 </Button>
               </div>
-
-              
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl transform rotate-3"></div>
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Professional IT Development" className="relative rounded-3xl shadow-2xl w-full h-96 object-cover transform -rotate-3 hover:rotate-0 transition-transform duration-500" />
+            {/* Visual Element */}
+            <div className="relative lg:block hidden">
+              <div className="relative">
+                {/* Glass Card */}
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl">
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                        <Code className="h-6 w-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">Web Development</h3>
+                        <p className="text-gray-400 text-sm">Modern & Responsive</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                        <Smartphone className="h-6 w-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">Mobile Apps</h3>
+                        <p className="text-gray-400 text-sm">iOS & Android</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
+                        <GraduationCap className="h-6 w-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">IT Training</h3>
+                        <p className="text-gray-400 text-sm">Expert-Led Courses</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl animate-bounce delay-300" />
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-bounce delay-700" />
+              </div>
             </div>
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
           </div>
         </div>
       </section>
