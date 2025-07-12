@@ -103,29 +103,7 @@ const Index = () => {
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 py-6">
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-500/20 rounded-lg mx-auto mb-2">
-                    <Users className="w-6 h-6 text-blue-400" />
-                  </div>
-                  <div className="text-2xl font-bold text-white">500+</div>
-                  <div className="text-sm text-slate-400">Graduates</div>
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 bg-purple-500/20 rounded-lg mx-auto mb-2">
-                    <Code className="w-6 h-6 text-purple-400" />
-                  </div>
-                  <div className="text-2xl font-bold text-white">100+</div>
-                  <div className="text-sm text-slate-400">Projects</div>
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 bg-cyan-500/20 rounded-lg mx-auto mb-2">
-                    <Award className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <div className="text-2xl font-bold text-white">5+</div>
-                  <div className="text-sm text-slate-400">Years</div>
-                </div>
-              </div>
+              
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
