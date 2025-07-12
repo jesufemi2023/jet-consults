@@ -144,53 +144,133 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive IT solutions tailored to meet your business needs and drive digital transformation.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {services.map((service, index) => <Card key={index} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
-                  </div>
-                  <CardTitle className="text-xl font-bold text-gray-900">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600 text-center leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>)}
-          </div>
-
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-8 max-w-4xl mx-auto">
-            <h4 className="text-2xl font-bold mb-4 text-center">Need Professional IT Solutions?</h4>
-            <p className="text-lg mb-4 text-center">
-              Get custom websites, web apps, desktop applications, or professional camera & computer installations for your business.
-            </p>
-            <p className="text-base mb-6 text-center opacity-90">
-              Contact us today for a FREE consultation and discover how we can elevate your business to the next level.
-            </p>
+      <section id="services" className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+              <Zap className="w-4 h-4 text-blue-600 mr-2" />
+              <span className="text-sm font-medium text-blue-800">Premium Services</span>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={handleWhatsAppContact} className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-                <Phone className="mr-2 h-5 w-5" />
-                WhatsApp: 07060737554
-              </Button>
-              <Button onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us Now
-              </Button>
-              <Button onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-                <MapPin className="mr-2 h-5 w-5" />
-                Visit Our Office
-              </Button>
+            <h3 className="text-5xl lg:text-6xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 bg-clip-text text-transparent">
+                Transform Your Business
+              </span>
+            </h3>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+              Enterprise-grade IT solutions designed to accelerate your digital transformation journey and unlock unprecedented growth opportunities.
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-20">
+            {services.map((service, index) => (
+              <div 
+                key={index} 
+                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                {/* Gradient Border Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className="relative mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                      {service.icon}
+                    </div>
+                    <div className="absolute inset-0 w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  </div>
+
+                  {/* Content */}
+                  <h4 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-900 transition-colors duration-300">
+                    {service.title}
+                  </h4>
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+
+                  {/* Learn More Link */}
+                  <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors duration-300">
+                    <span className="mr-2">Learn More</span>
+                    <ExternalLink className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </div>
+
+                {/* Floating Particles */}
+                <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 animate-pulse"></div>
+                <div className="absolute bottom-6 left-6 w-1 h-1 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="relative">
+            <div className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 rounded-3xl p-12 text-white relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-0 w-full h-full" style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+                }}></div>
+              </div>
+              
+              <div className="relative z-10 text-center max-w-4xl mx-auto">
+                <div className="mb-8">
+                  <h4 className="text-3xl lg:text-4xl font-bold mb-4">
+                    Ready to <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Transform</span> Your Business?
+                  </h4>
+                  <p className="text-xl text-slate-300 leading-relaxed">
+                    Join industry leaders who trust us to deliver cutting-edge solutions that drive measurable results and sustainable growth.
+                  </p>
+                </div>
+
+                {/* Stats */}
+                <div className="grid md:grid-cols-3 gap-8 mb-10">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
+                    <div className="text-slate-300">Projects Delivered</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-blue-400 mb-2">98%</div>
+                    <div className="text-slate-300">Client Satisfaction</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                    <div className="text-slate-300">Expert Support</div>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    onClick={handleWhatsAppContact} 
+                    className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    WhatsApp: 07060737554
+                  </Button>
+                  <Button 
+                    onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} 
+                    className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                  >
+                    <Mail className="mr-2 h-5 w-5" />
+                    Email Us Now
+                  </Button>
+                  <Button 
+                    onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} 
+                    className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                  >
+                    <MapPin className="mr-2 h-5 w-5" />
+                    Visit Our Office
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
