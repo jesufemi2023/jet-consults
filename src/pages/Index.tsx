@@ -5,26 +5,92 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import heroImage from '@/assets/hero-professional-consulting.jpg';
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [expandedService, setExpandedService] = useState<number | null>(null);
   const services = [{
     icon: <Code className="h-8 w-8" />,
     title: "Website & Web App Development",
-    description: "We build professional, responsive websites and powerful web applications using modern technologies to elevate your online presence."
+    description: "We build professional, responsive websites and powerful web applications using modern technologies to elevate your online presence.",
+    details: {
+      overview: "Transform your digital presence with cutting-edge web solutions designed to drive growth and engagement.",
+      features: [
+        "Custom responsive website design optimized for all devices",
+        "Modern web applications using React, Next.js, and latest frameworks", 
+        "E-commerce platforms with secure payment integration",
+        "Content Management Systems (CMS) for easy content updates",
+        "Search Engine Optimization (SEO) for maximum visibility",
+        "Lightning-fast loading speeds and performance optimization"
+      ],
+      technologies: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+      benefits: "Increase your online visibility, engage customers effectively, and boost conversions with a professional web presence that works 24/7 for your business."
+    }
   }, {
     icon: <Smartphone className="h-8 w-8" />,
     title: "Mobile App Development",
-    description: "We create native and cross-platform mobile applications for iOS and Android to reach your customers anywhere."
+    description: "We create native and cross-platform mobile applications for iOS and Android to reach your customers anywhere.",
+    details: {
+      overview: "Reach millions of mobile users with custom applications that deliver exceptional user experiences.",
+      features: [
+        "Native iOS and Android app development",
+        "Cross-platform solutions using React Native and Flutter",
+        "User-friendly interface design and smooth navigation",
+        "Push notifications and real-time messaging",
+        "Offline functionality and data synchronization",
+        "App Store and Google Play Store deployment assistance"
+      ],
+      technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Redux"],
+      benefits: "Expand your market reach, increase customer engagement, and generate new revenue streams through mobile commerce and services."
+    }
   }, {
     icon: <Monitor className="h-8 w-8" />,
     title: "Desktop Applications",
-    description: "We develop custom desktop software solutions tailored to your business needs and workflow requirements."
+    description: "We develop custom desktop software solutions tailored to your business needs and workflow requirements.",
+    details: {
+      overview: "Streamline your business operations with powerful desktop applications designed for maximum productivity.",
+      features: [
+        "Custom desktop software for Windows, macOS, and Linux",
+        "Database integration and management systems",
+        "Automated workflow and process optimization",
+        "Multi-user collaboration features",
+        "Data analytics and reporting dashboards",
+        "Integration with existing business systems"
+      ],
+      technologies: ["Python", "Java", "C#", ".NET", "Qt", "Electron"],
+      benefits: "Increase operational efficiency, reduce manual work, improve data accuracy, and gain valuable business insights through custom automation."
+    }
   }, {
     icon: <Shield className="h-8 w-8" />,
     title: "Camera & Computer Installation",
-    description: "We install professional camera systems and computer setups for hotels, offices, and commercial spaces."
+    description: "We install professional camera systems and computer setups for hotels, offices, and commercial spaces.",
+    details: {
+      overview: "Secure your premises and optimize your IT infrastructure with professional installation services.",
+      features: [
+        "High-definition security camera systems with remote monitoring",
+        "Network setup and configuration for optimal performance",
+        "Computer workstation installation and optimization",
+        "Data backup and recovery solutions",
+        "Wireless network setup and security configuration",
+        "Ongoing maintenance and technical support"
+      ],
+      technologies: ["IP Cameras", "Network Switches", "Wireless Access Points", "NVR Systems", "Cloud Storage"],
+      benefits: "Enhance security, improve operational efficiency, reduce theft and unauthorized access, and ensure reliable IT infrastructure for your business."
+    }
   }, {
     icon: <GraduationCap className="h-8 w-8" />,
     title: "IT Training Programs",
-    description: "Comprehensive coding bootcamps in Python, JavaScript, SQL, Django, React.js, AI, Cybersecurity, Data Analysis, and more for children, youth, and adults."
+    description: "Comprehensive coding bootcamps in Python, JavaScript, SQL, Django, React.js, AI, Cybersecurity, Data Analysis, and more for children, youth, and adults.",
+    details: {
+      overview: "Launch your tech career or upgrade your skills with industry-relevant training programs designed for real-world success.",
+      features: [
+        "Hands-on coding bootcamps from beginner to advanced levels",
+        "Industry-standard curriculum updated with latest technologies",
+        "Personal mentorship and career guidance",
+        "Real project portfolios to showcase your skills",
+        "Job placement assistance and interview preparation",
+        "Flexible learning schedules for working professionals"
+      ],
+      technologies: ["Python", "JavaScript", "React.js", "Django", "SQL", "Machine Learning", "Cybersecurity"],
+      benefits: "Gain in-demand skills, increase your earning potential, switch to a tech career, or advance in your current role with practical, industry-relevant training."
+    }
   }];
   const trainingCourses = ["Python Programming", "JavaScript Development", "SQL Database Management", "Django Framework", "React.js Frontend", "Artificial Intelligence", "Web Development", "Mobile App Development", "Cybersecurity", "Data Analysis"];
   const handleWhatsAppContact = () => {
@@ -198,10 +264,79 @@ const Index = () => {
                   </p>
 
                   {/* Learn More Link */}
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors duration-300">
+                  <button
+                    onClick={() => setExpandedService(expandedService === index ? null : index)}
+                    className="flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors duration-300 w-full text-left"
+                  >
                     <span className="mr-2">Learn More</span>
                     <ExternalLink className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
+                  </button>
+
+                  {/* Expanded Content */}
+                  {expandedService === index && (
+                    <div className="mt-6 pt-6 border-t border-slate-200 animate-fade-in">
+                      {/* Overview */}
+                      <div className="mb-6">
+                        <h5 className="text-lg font-bold text-slate-900 mb-3">Overview</h5>
+                        <p className="text-slate-600 leading-relaxed">{service.details.overview}</p>
+                      </div>
+
+                      {/* Key Features */}
+                      <div className="mb-6">
+                        <h5 className="text-lg font-bold text-slate-900 mb-3">Key Features</h5>
+                        <ul className="space-y-2">
+                          {service.details.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-start">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                              <span className="text-slate-600">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Technologies */}
+                      <div className="mb-6">
+                        <h5 className="text-lg font-bold text-slate-900 mb-3">Technologies Used</h5>
+                        <div className="flex flex-wrap gap-2">
+                          {service.details.technologies.map((tech, techIndex) => (
+                            <span 
+                              key={techIndex}
+                              className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm font-medium rounded-full"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Benefits */}
+                      <div className="mb-6">
+                        <h5 className="text-lg font-bold text-slate-900 mb-3">Why Choose This Service?</h5>
+                        <p className="text-slate-600 leading-relaxed bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg border-l-4 border-blue-500">
+                          {service.details.benefits}
+                        </p>
+                      </div>
+
+                      {/* CTA Buttons */}
+                      <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                        <Button 
+                          onClick={handleWhatsAppContact}
+                          className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                        >
+                          <Phone className="mr-2 h-4 w-4" />
+                          Get Free Quote
+                        </Button>
+                        <Button 
+                          onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'}
+                          variant="outline"
+                          className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg transition-all duration-300"
+                        >
+                          <Mail className="mr-2 h-4 w-4" />
+                          Discuss Project
+                        </Button>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Floating Particles */}
