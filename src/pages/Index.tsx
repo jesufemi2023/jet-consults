@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, ExternalLink, Code, Smartphone, Monitor, Shield, GraduationCap, BarChart3, Menu, X, Star, Users, Award, TrendingUp } from 'lucide-react';
+import { Phone, Mail, MapPin, ExternalLink, Code, Smartphone, Monitor, Shield, GraduationCap, BarChart3, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import heroImage from '../assets/hero-tech-consulting.jpg';
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
@@ -92,196 +91,39 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-indigo-950 via-purple-900 to-slate-900">
-        {/* Background Image Overlay */}
-        <div className="absolute inset-0">
-          <img 
-            src={heroImage} 
-            alt="Professional IT Team" 
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/90 via-purple-900/80 to-slate-900/90" />
-        </div>
-        
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/15 rounded-full blur-3xl animate-pulse delay-1000" />
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-500" />
-        </div>
-        
-        {/* Geometric Patterns */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 right-20 w-32 h-32 border border-white/20 rotate-45 animate-spin-slow" />
-          <div className="absolute bottom-32 left-20 w-24 h-24 border border-purple-300/30 rotate-12 animate-pulse" />
-        </div>
-        
-        <div className="relative z-10 flex items-center justify-center min-h-screen">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8 animate-fade-in">
+              <div className="space-y-4">
+                <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                  Transform Your
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    {" "}Digital Future
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Professional IT solutions and comprehensive training programs designed to elevate your business and career in the digital age.
+                </p>
+              </div>
               
-              {/* Content */}
-              <div className="space-y-8 text-white">
-                <div className="space-y-6">
-                  {/* Badge */}
-                  <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-xl rounded-full border border-white/20 shadow-xl">
-                    <Star className="w-4 h-4 text-yellow-400 mr-2" />
-                    <span className="text-sm font-semibold bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
-                      #1 IT Solutions & Training Provider
-                    </span>
-                  </div>
-                  
-                  {/* Main Heading */}
-                  <h1 className="text-5xl sm:text-6xl lg:text-8xl font-extrabold leading-tight">
-                    <span className="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                      Innovate.
-                    </span>
-                    <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                      Transform.
-                    </span>
-                    <span className="block bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                      Succeed.
-                    </span>
-                  </h1>
-                  
-                  {/* Subtitle */}
-                  <p className="text-xl sm:text-2xl text-gray-300 leading-relaxed max-w-2xl font-light">
-                    Elevate your business with <span className="text-blue-400 font-semibold">cutting-edge technology</span> solutions and world-class training programs that drive real results.
-                  </p>
-                </div>
-                
-                {/* Key Features */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 py-8">
-                  <div className="text-center group">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                      <Users className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-blue-400">1000+</div>
-                    <div className="text-sm text-gray-400">Happy Clients</div>
-                  </div>
-                  
-                  <div className="text-center group">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                      <Award className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-purple-400">500+</div>
-                    <div className="text-sm text-gray-400">Projects Done</div>
-                  </div>
-                  
-                  <div className="text-center group">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                      <TrendingUp className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-green-400">98%</div>
-                    <div className="text-sm text-gray-400">Success Rate</div>
-                  </div>
-                  
-                  <div className="text-center group">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                      <Star className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-orange-400">5.0</div>
-                    <div className="text-sm text-gray-400">Rating</div>
-                  </div>
-                </div>
-                
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-6">
-                  <Button 
-                    onClick={handleTrainingRegistration} 
-                    className="group relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 hover:from-blue-700 hover:via-purple-700 hover:to-blue-800 text-white px-10 py-4 text-lg font-bold rounded-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 overflow-hidden"
-                  >
-                    <span className="relative z-10 flex items-center">
-                      🚀 Start Your Journey
-                      <ExternalLink className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </Button>
-                  
-                  <Button 
-                    onClick={handleWhatsAppContact} 
-                    variant="outline" 
-                    className="group border-2 border-white/40 text-white hover:bg-white/10 backdrop-blur-xl px-10 py-4 text-lg font-bold rounded-2xl transition-all duration-500 hover:border-white/60 hover:shadow-xl hover:shadow-white/20"
-                  >
-                    <Phone className="mr-3 h-5 w-5 group-hover:animate-pulse" />
-                    Free Consultation
-                  </Button>
-                </div>
-                
-                {/* Trust Indicators */}
-                <div className="flex flex-wrap items-center gap-8 pt-8 opacity-70">
-                  <span className="text-sm text-gray-400">Trusted by leading companies:</span>
-                  <div className="flex space-x-6 text-gray-500">
-                    <span className="font-semibold">Microsoft</span>
-                    <span className="font-semibold">Google</span>
-                    <span className="font-semibold">IBM</span>
-                  </div>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button onClick={handleTrainingRegistration} className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Register for Training
+                  <ExternalLink className="ml-2 h-5 w-5" />
+                </Button>
+                <Button onClick={handleWhatsAppContact} variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-300">
+                  Get Free Consultation
+                  <Phone className="ml-2 h-5 w-5" />
+                </Button>
               </div>
 
-              {/* Interactive Visual Element */}
-              <div className="relative lg:block hidden">
-                <div className="relative group">
-                  {/* Main Card */}
-                  <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 shadow-2xl transform group-hover:scale-105 transition-all duration-500">
-                    <div className="space-y-8">
-                      
-                      {/* Header */}
-                      <div className="text-center">
-                        <h3 className="text-2xl font-bold text-white mb-2">Our Expertise</h3>
-                        <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto" />
-                      </div>
-                      
-                      {/* Service Cards */}
-                      <div className="space-y-6">
-                        <div className="flex items-center space-x-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors duration-300">
-                          <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                            <Code className="h-7 w-7 text-white" />
-                          </div>
-                          <div>
-                            <h4 className="text-lg font-semibold text-white">Web Development</h4>
-                            <p className="text-gray-400 text-sm">React, Next.js, Full-Stack</p>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center space-x-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors duration-300">
-                          <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                            <Smartphone className="h-7 w-7 text-white" />
-                          </div>
-                          <div>
-                            <h4 className="text-lg font-semibold text-white">Mobile Apps</h4>
-                            <p className="text-gray-400 text-sm">iOS, Android, Cross-Platform</p>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center space-x-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors duration-300">
-                          <div className="w-14 h-14 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
-                            <GraduationCap className="h-7 w-7 text-white" />
-                          </div>
-                          <div>
-                            <h4 className="text-lg font-semibold text-white">IT Training</h4>
-                            <p className="text-gray-400 text-sm">AI, Cybersecurity, DevOps</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Floating Elements */}
-                    <div className="absolute -top-6 -right-6 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-bounce delay-300" />
-                    <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-purple-500/20 rounded-full blur-xl animate-bounce delay-700" />
-                  </div>
-                </div>
-              </div>
+              
             </div>
-          </div>
-        </div>
-        
-        {/* Enhanced Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="flex flex-col items-center space-y-2">
-            <span className="text-white/60 text-xs font-medium">Scroll to explore</span>
-            <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-gradient-to-b from-blue-400 to-purple-400 rounded-full mt-2 animate-pulse" />
+
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl transform rotate-3"></div>
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Professional IT Development" className="relative rounded-3xl shadow-2xl w-full h-96 object-cover transform -rotate-3 hover:rotate-0 transition-transform duration-500" />
             </div>
           </div>
         </div>
