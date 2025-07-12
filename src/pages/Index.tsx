@@ -37,11 +37,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" 
-                alt="Jet Consults Logo" 
-                className="h-10 w-auto bg-white rounded-md p-1"
-              />
+              <img src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" alt="Jet Consults Logo" className="h-10 w-auto bg-white rounded-md p-1" />
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
@@ -131,17 +127,11 @@ const Index = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 WhatsApp: 07060737554
               </Button>
-              <Button 
-                onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} 
-                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
+              <Button onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us Now
               </Button>
-              <Button 
-                onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} 
-                className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
+              <Button onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
                 <MapPin className="mr-2 h-5 w-5" />
                 Visit Our Office
               </Button>
@@ -175,7 +165,7 @@ const Index = () => {
               <p className="text-gray-600 mb-6">
                 Join hundreds of successful graduates who have transformed their careers through our expert-led training programs.
               </p>
-              <Button onClick={handleTrainingRegistration} className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
+              <Button onClick={handleTrainingRegistration} className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center text-xl">
                 Register Now!!!
               </Button>
             </div>
