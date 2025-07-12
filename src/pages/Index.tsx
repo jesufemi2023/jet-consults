@@ -234,16 +234,16 @@ const Index = () => {
                 {/* Stats */}
                 <div className="grid md:grid-cols-3 gap-8 mb-10">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
-                    <div className="text-slate-300">Projects Delivered</div>
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">100%</div>
+                    <div className="text-slate-300">Commitment to Excellence</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400 mb-2">98%</div>
-                    <div className="text-slate-300">Client Satisfaction</div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">24/7</div>
+                    <div className="text-slate-300">Dedicated Support</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-                    <div className="text-slate-300">Expert Support</div>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">Fresh</div>
+                    <div className="text-slate-300">Innovative Solutions</div>
                   </div>
                 </div>
                 
