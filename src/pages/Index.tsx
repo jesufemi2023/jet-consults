@@ -175,7 +175,7 @@ const Index = () => {
               <p className="text-gray-600 mb-6">
                 Join hundreds of successful graduates who have transformed their careers through our expert-led training programs.
               </p>
-              <Button onClick={handleTrainingRegistration} className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-base sm:text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+              <Button onClick={handleTrainingRegistration} className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
                 Register Now - Limited Spots Available
                 <ExternalLink className="ml-2 h-5 w-5" />
               </Button>
