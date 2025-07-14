@@ -88,7 +88,7 @@ const Index = () => {
         "Job placement assistance and interview preparation",
         "Flexible learning schedules for working professionals"
       ],
-      technologies: ["Python", "JavaScript", "React.js", "Django", "SQL", "Machine Learning", "Cybersecurity"],
+      technologies: ["Python", "JavaScript", "React.js", "Django", "SQL", "Machine Learning", "Cybersecurity", "AI for Software Engineer", "AI for Content Creator", "AI for Data Analysis"],
       benefits: "Gain in-demand skills, increase your earning potential, switch to a tech career, or advance in your current role with practical, industry-relevant training."
     }
   }];
