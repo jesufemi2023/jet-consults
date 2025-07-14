@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, ExternalLink, Code, Smartphone, Monitor, Shield, GraduationCap, BarChart3, Menu, X, Zap, Users, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import heroImage from '@/assets/hero-professional-consulting.jpg';
+import heroImage from '@/assets/hero-tech-training.jpg';
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedService, setExpandedService] = useState<number | null>(null);
@@ -139,107 +139,143 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary/20 via-background to-secondary/20">
-        {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        
-        {/* Floating Geometric Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-accent/10 rounded-full blur-2xl animate-pulse"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroImage} 
+            alt="Tech training and services" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/85 to-slate-900/70"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center space-y-12">
-            {/* Badge */}
-            <div className="inline-flex items-center px-6 py-3 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 animate-fade-in">
-              <Zap className="w-5 h-5 text-primary mr-3" />
-              <span className="text-sm font-semibold text-primary">Elite Technology Partners</span>
-            </div>
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-2 h-32 bg-primary/30 transform rotate-45 animate-pulse"></div>
+          <div className="absolute bottom-32 right-20 w-3 h-24 bg-secondary/40 transform -rotate-12 animate-pulse"></div>
+          <div className="absolute top-1/3 right-10 w-1 h-20 bg-accent/30 transform rotate-90 animate-pulse"></div>
+          <div className="absolute bottom-20 left-1/4 w-2 h-16 bg-primary/20 transform rotate-30 animate-pulse"></div>
+        </div>
 
-            {/* Main Heading */}
-            <div className="space-y-8 animate-fade-in">
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-[1.1] tracking-tight">
-                <span className="block bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
-                  Transforming Ideas
-                </span>
-                <span className="block text-foreground/90">
-                  Into Digital Reality
-                </span>
-              </h1>
-              
-              <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-                We deliver cutting-edge software solutions, comprehensive IT training, and innovative technology services that drive business growth and career advancement in the digital age.
-              </p>
-            </div>
-
-            {/* Feature Highlights */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in">
-              <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
-                  <Code className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold">Custom Development</h3>
-                <p className="text-muted-foreground text-sm">Bespoke software solutions tailored to your unique business needs</p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="text-left space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center px-6 py-3 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30 animate-fade-in">
+                <Users className="w-5 h-5 text-primary mr-3" />
+                <span className="text-sm font-semibold text-primary">Training & Tech Solutions</span>
               </div>
-              
-              <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto">
-                  <GraduationCap className="w-8 h-8 text-secondary" />
-                </div>
-                <h3 className="text-lg font-semibold">Expert Training</h3>
-                <p className="text-muted-foreground text-sm">Industry-leading programs in AI, development, and emerging technologies</p>
-              </div>
-              
-              <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto">
-                  <Shield className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="text-lg font-semibold">Complete Support</h3>
-                <p className="text-muted-foreground text-sm">End-to-end solutions from consultation to deployment and beyond</p>
-              </div>
-            </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
-              <Button 
-                onClick={handleTrainingRegistration} 
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                Explore Training Programs
-                <ExternalLink className="ml-2 h-5 w-5" />
-              </Button>
-              
-              <Button 
-                onClick={handleWhatsAppContact} 
-                variant="outline" 
-                size="lg"
-                className="border-2 hover:bg-accent/10 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
-              >
-                Get Free Consultation
-                <Phone className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
+              {/* Main Heading */}
+              <div className="space-y-6 animate-fade-in">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-white">
+                  <span className="block">Empowering</span>
+                  <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    Tech Careers
+                  </span>
+                  <span className="block text-white/90">& Building</span>
+                  <span className="block bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent">
+                    Digital Solutions
+                  </span>
+                </h1>
+                
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl">
+                  We train the next generation of tech professionals while delivering cutting-edge software solutions, 
+                  installation services, and comprehensive IT support that drives business success.
+                </p>
+              </div>
 
-            {/* Trust Indicators */}
-            <div className="pt-12 border-t border-border/50">
-              <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-muted-foreground">Commitment to Excellence</div>
+              {/* Key Stats */}
+              <div className="grid grid-cols-2 gap-8 animate-fade-in">
+                <div className="text-center lg:text-left">
+                  <div className="text-3xl md:text-4xl font-bold text-primary">500+</div>
+                  <div className="text-sm text-white/70">Students Trained</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-secondary">24/7</div>
-                  <div className="text-sm text-muted-foreground">Dedicated Support</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-accent">∞</div>
-                  <div className="text-sm text-muted-foreground">Fresh Innovative Solutions</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-3xl md:text-4xl font-bold text-secondary">10+</div>
+                  <div className="text-sm text-white/70">Tech Courses</div>
                 </div>
               </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
+                <Button 
+                  onClick={handleTrainingRegistration} 
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  <GraduationCap className="mr-2 h-5 w-5" />
+                  Join Training Program
+                </Button>
+                
+                <Button 
+                  onClick={handleWhatsAppContact} 
+                  variant="outline" 
+                  size="lg"
+                  className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 backdrop-blur-sm"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Request Services
+                </Button>
+              </div>
             </div>
+
+            {/* Right Content - Service Highlights */}
+            <div className="lg:pl-12 space-y-6 animate-fade-in">
+              {/* Training Card */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <GraduationCap className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Tech Training Programs</h3>
+                    <p className="text-white/70 text-sm leading-relaxed">
+                      Comprehensive bootcamps in Python, JavaScript, AI, React.js, Cybersecurity, and Data Analysis
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Development Card */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Code className="w-6 h-6 text-secondary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Software Development</h3>
+                    <p className="text-white/70 text-sm leading-relaxed">
+                      Custom web apps, mobile applications, and desktop software tailored to your business needs
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Installation Card */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Shield className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">IT Installation & Support</h3>
+                    <p className="text-white/70 text-sm leading-relaxed">
+                      Professional camera systems, network setup, and computer installation services
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
