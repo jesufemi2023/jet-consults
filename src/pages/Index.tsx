@@ -139,69 +139,104 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse"></div>
-        </div>
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary/20 via-background to-secondary/20">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Content */}
+        {/* Floating Geometric Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-accent/10 rounded-full blur-2xl animate-pulse"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center space-y-12">
+            {/* Badge */}
+            <div className="inline-flex items-center px-6 py-3 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 animate-fade-in">
+              <Zap className="w-5 h-5 text-primary mr-3" />
+              <span className="text-sm font-semibold text-primary">Elite Technology Partners</span>
+            </div>
+
+            {/* Main Heading */}
             <div className="space-y-8 animate-fade-in">
-              <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                  <Zap className="w-4 h-4 text-yellow-400 mr-2" />
-                  <span className="text-sm font-medium">Next-Generation IT Solutions</span>
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-[1.1] tracking-tight">
+                <span className="block bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
+                  Transforming Ideas
+                </span>
+                <span className="block text-foreground/90">
+                  Into Digital Reality
+                </span>
+              </h1>
+              
+              <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+                We deliver cutting-edge software solutions, comprehensive IT training, and innovative technology services that drive business growth and career advancement in the digital age.
+              </p>
+            </div>
+
+            {/* Feature Highlights */}
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in">
+              <div className="text-center space-y-3">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
+                  <Code className="w-8 h-8 text-primary" />
                 </div>
-                
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                  <span className="block text-white">Innovate.</span>
-                  <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">Transform.</span>
-                  <span className="block text-white">Succeed.</span>
-                </h1>
-                
-                <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl">
-                  Cutting-edge technology solutions and world-class training programs that propel businesses and careers into the future.
-                </p>
+                <h3 className="text-lg font-semibold">Custom Development</h3>
+                <p className="text-muted-foreground text-sm">Bespoke software solutions tailored to your unique business needs</p>
               </div>
               
-              {/* Stats */}
+              <div className="text-center space-y-3">
+                <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto">
+                  <GraduationCap className="w-8 h-8 text-secondary" />
+                </div>
+                <h3 className="text-lg font-semibold">Expert Training</h3>
+                <p className="text-muted-foreground text-sm">Industry-leading programs in AI, development, and emerging technologies</p>
+              </div>
               
-              
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={handleTrainingRegistration} className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-                  Start Your Journey
-                  <ExternalLink className="ml-2 h-5 w-5" />
-                </Button>
-                <Button onClick={handleWhatsAppContact} variant="outline" className="border-2 border-white/30 hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:border-white/50 text-indigo-200">
-                  Free Consultation
-                  <Phone className="ml-2 h-5 w-5" />
-                </Button>
+              <div className="text-center space-y-3">
+                <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto">
+                  <Shield className="w-8 h-8 text-accent" />
+                </div>
+                <h3 className="text-lg font-semibold">Complete Support</h3>
+                <p className="text-muted-foreground text-sm">End-to-end solutions from consultation to deployment and beyond</p>
               </div>
             </div>
 
-            {/* Hero Image */}
-            <div className="relative lg:pl-8">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-3xl transform rotate-6 scale-105 blur-lg"></div>
-              <div className="relative">
-                <img src={heroImage} alt="Professional IT Consulting Services" className="relative rounded-3xl shadow-2xl w-full h-[600px] object-cover transform hover:scale-105 transition-all duration-700 border border-white/10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent rounded-3xl"></div>
-                
-                {/* Floating Elements */}
-                <div className="absolute top-6 right-6 bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 animate-pulse">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                    <span className="text-white text-sm font-medium">Live Projects</span>
-                  </div>
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
+              <Button 
+                onClick={handleTrainingRegistration} 
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Explore Training Programs
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
+              
+              <Button 
+                onClick={handleWhatsAppContact} 
+                variant="outline" 
+                size="lg"
+                className="border-2 hover:bg-accent/10 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
+              >
+                Get Free Consultation
+                <Phone className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="pt-12 border-t border-border/50">
+              <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-primary">100%</div>
+                  <div className="text-sm text-muted-foreground">Commitment to Excellence</div>
                 </div>
-                
-                <div className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 animate-pulse">
-                  <div className="text-white text-sm font-medium">24/7 Support</div>
-                  <div className="text-slate-300 text-xs">Always Available</div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-secondary">24/7</div>
+                  <div className="text-sm text-muted-foreground">Dedicated Support</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-accent">∞</div>
+                  <div className="text-sm text-muted-foreground">Fresh Innovative Solutions</div>
                 </div>
               </div>
             </div>
