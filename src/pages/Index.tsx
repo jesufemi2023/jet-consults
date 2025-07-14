@@ -12,14 +12,7 @@ const Index = () => {
     description: "We build professional, responsive websites and powerful web applications using modern technologies to elevate your online presence.",
     details: {
       overview: "Transform your digital presence with cutting-edge web solutions designed to drive growth and engagement.",
-      features: [
-        "Custom responsive website design optimized for all devices",
-        "Modern web applications using React, Next.js, and latest frameworks", 
-        "E-commerce platforms with secure payment integration",
-        "Content Management Systems (CMS) for easy content updates",
-        "Search Engine Optimization (SEO) for maximum visibility",
-        "Lightning-fast loading speeds and performance optimization"
-      ],
+      features: ["Custom responsive website design optimized for all devices", "Modern web applications using React, Next.js, and latest frameworks", "E-commerce platforms with secure payment integration", "Content Management Systems (CMS) for easy content updates", "Search Engine Optimization (SEO) for maximum visibility", "Lightning-fast loading speeds and performance optimization"],
       technologies: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
       benefits: "Increase your online visibility, engage customers effectively, and boost conversions with a professional web presence that works 24/7 for your business."
     }
@@ -29,14 +22,7 @@ const Index = () => {
     description: "We create native and cross-platform mobile applications for iOS and Android to reach your customers anywhere.",
     details: {
       overview: "Reach millions of mobile users with custom applications that deliver exceptional user experiences.",
-      features: [
-        "Native iOS and Android app development",
-        "Cross-platform solutions using React Native and Flutter",
-        "User-friendly interface design and smooth navigation",
-        "Push notifications and real-time messaging",
-        "Offline functionality and data synchronization",
-        "App Store and Google Play Store deployment assistance"
-      ],
+      features: ["Native iOS and Android app development", "Cross-platform solutions using React Native and Flutter", "User-friendly interface design and smooth navigation", "Push notifications and real-time messaging", "Offline functionality and data synchronization", "App Store and Google Play Store deployment assistance"],
       technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Redux"],
       benefits: "Expand your market reach, increase customer engagement, and generate new revenue streams through mobile commerce and services."
     }
@@ -46,14 +32,7 @@ const Index = () => {
     description: "We develop custom desktop software solutions tailored to your business needs and workflow requirements.",
     details: {
       overview: "Streamline your business operations with powerful desktop applications designed for maximum productivity.",
-      features: [
-        "Custom desktop software for Windows, macOS, and Linux",
-        "Database integration and management systems",
-        "Automated workflow and process optimization",
-        "Multi-user collaboration features",
-        "Data analytics and reporting dashboards",
-        "Integration with existing business systems"
-      ],
+      features: ["Custom desktop software for Windows, macOS, and Linux", "Database integration and management systems", "Automated workflow and process optimization", "Multi-user collaboration features", "Data analytics and reporting dashboards", "Integration with existing business systems"],
       technologies: ["Python", "Java", "C#", ".NET", "Qt", "Electron"],
       benefits: "Increase operational efficiency, reduce manual work, improve data accuracy, and gain valuable business insights through custom automation."
     }
@@ -63,14 +42,7 @@ const Index = () => {
     description: "We install professional camera systems and computer setups for hotels, offices, and commercial spaces.",
     details: {
       overview: "Secure your premises and optimize your IT infrastructure with professional installation services.",
-      features: [
-        "High-definition security camera systems with remote monitoring",
-        "Network setup and configuration for optimal performance",
-        "Computer workstation installation and optimization",
-        "Data backup and recovery solutions",
-        "Wireless network setup and security configuration",
-        "Ongoing maintenance and technical support"
-      ],
+      features: ["High-definition security camera systems with remote monitoring", "Network setup and configuration for optimal performance", "Computer workstation installation and optimization", "Data backup and recovery solutions", "Wireless network setup and security configuration", "Ongoing maintenance and technical support"],
       technologies: ["IP Cameras", "Network Switches", "Wireless Access Points", "NVR Systems", "Cloud Storage"],
       benefits: "Enhance security, improve operational efficiency, reduce theft and unauthorized access, and ensure reliable IT infrastructure for your business."
     }
@@ -80,14 +52,7 @@ const Index = () => {
     description: "Comprehensive coding bootcamps in Python, JavaScript, SQL, Django, React.js, AI, Cybersecurity, Data Analysis, and more for children, youth, and adults.",
     details: {
       overview: "Launch your tech career or upgrade your skills with industry-relevant training programs designed for real-world success.",
-      features: [
-        "Hands-on coding bootcamps from beginner to advanced levels",
-        "Industry-standard curriculum updated with latest technologies",
-        "Personal mentorship and career guidance",
-        "Real project portfolios to showcase your skills",
-        "Job placement assistance and interview preparation",
-        "Flexible learning schedules for working professionals"
-      ],
+      features: ["Hands-on coding bootcamps from beginner to advanced levels", "Industry-standard curriculum updated with latest technologies", "Personal mentorship and career guidance", "Real project portfolios to showcase your skills", "Job placement assistance and interview preparation", "Flexible learning schedules for working professionals"],
       technologies: ["Python", "JavaScript", "React.js", "Django", "SQL", "Machine Learning", "Cybersecurity", "AI for Software Engineer", "AI for Content Creator", "AI for Data Analysis"],
       benefits: "Gain in-demand skills, increase your earning potential, switch to a tech career, or advance in your current role with practical, industry-relevant training."
     }
@@ -142,11 +107,7 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImage} 
-            alt="Tech training and services" 
-            className="w-full h-full object-cover opacity-70"
-          />
+          <img src={heroImage} alt="Tech training and services" className="w-full h-full object-cover opacity-70" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
         </div>
 
@@ -188,34 +149,16 @@ const Index = () => {
               </div>
 
               {/* Key Stats */}
-              <div className="grid grid-cols-2 gap-8 animate-fade-in">
-                <div className="text-center lg:text-left">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">500+</div>
-                  <div className="text-sm text-white/70">Students Trained</div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-3xl md:text-4xl font-bold text-secondary">10+</div>
-                  <div className="text-sm text-white/70">Tech Courses</div>
-                </div>
-              </div>
+              
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
-                <Button 
-                  onClick={handleTrainingRegistration} 
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
+                <Button onClick={handleTrainingRegistration} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                   <GraduationCap className="mr-2 h-5 w-5" />
                   Join Training Program
                 </Button>
                 
-                <Button 
-                  onClick={handleWhatsAppContact} 
-                  variant="outline" 
-                  size="lg"
-                  className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 backdrop-blur-sm"
-                >
+                <Button onClick={handleWhatsAppContact} variant="outline" size="lg" className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 backdrop-blur-sm">
                   <Phone className="mr-2 h-5 w-5" />
                   Request Services
                 </Button>
@@ -308,12 +251,9 @@ const Index = () => {
 
           {/* Services Grid */}
           <div className="grid lg:grid-cols-3 gap-8 mb-20">
-            {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
+            {services.map((service, index) => <div key={index} className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105" style={{
+            animationDelay: `${index * 150}ms`
+          }}>
                 {/* Gradient Border Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
                 
@@ -335,17 +275,13 @@ const Index = () => {
                   </p>
 
                   {/* Learn More Link */}
-                  <button
-                    onClick={() => setExpandedService(expandedService === index ? null : index)}
-                    className="flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors duration-300 w-full text-left"
-                  >
+                  <button onClick={() => setExpandedService(expandedService === index ? null : index)} className="flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors duration-300 w-full text-left">
                     <span className="mr-2">Learn More</span>
                     <ExternalLink className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
 
                   {/* Expanded Content */}
-                  {expandedService === index && (
-                    <div className="mt-6 pt-6 border-t border-slate-200 animate-fade-in">
+                  {expandedService === index && <div className="mt-6 pt-6 border-t border-slate-200 animate-fade-in">
                       {/* Overview */}
                       <div className="mb-6">
                         <h5 className="text-lg font-bold text-slate-900 mb-3">Overview</h5>
@@ -356,12 +292,10 @@ const Index = () => {
                       <div className="mb-6">
                         <h5 className="text-lg font-bold text-slate-900 mb-3">Key Features</h5>
                         <ul className="space-y-2">
-                          {service.details.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-start">
+                          {service.details.features.map((feature, featureIndex) => <li key={featureIndex} className="flex items-start">
                               <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                               <span className="text-slate-600">{feature}</span>
-                            </li>
-                          ))}
+                            </li>)}
                         </ul>
                       </div>
 
@@ -369,14 +303,9 @@ const Index = () => {
                       <div className="mb-6">
                         <h5 className="text-lg font-bold text-slate-900 mb-3">Technologies Used</h5>
                         <div className="flex flex-wrap gap-2">
-                          {service.details.technologies.map((tech, techIndex) => (
-                            <span 
-                              key={techIndex}
-                              className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm font-medium rounded-full"
-                            >
+                          {service.details.technologies.map((tech, techIndex) => <span key={techIndex} className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm font-medium rounded-full">
                               {tech}
-                            </span>
-                          ))}
+                            </span>)}
                         </div>
                       </div>
 
@@ -390,31 +319,24 @@ const Index = () => {
 
                       {/* CTA Buttons */}
                       <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                        <Button 
-                          onClick={handleWhatsAppContact}
-                          className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
-                        >
+                        <Button onClick={handleWhatsAppContact} className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
                           <Phone className="mr-2 h-4 w-4" />
                           Get Free Quote
                         </Button>
-                        <Button 
-                          onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'}
-                          variant="outline"
-                          className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg transition-all duration-300"
-                        >
+                        <Button onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} variant="outline" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg transition-all duration-300">
                           <Mail className="mr-2 h-4 w-4" />
                           Discuss Project
                         </Button>
                       </div>
-                    </div>
-                  )}
+                    </div>}
                 </div>
 
                 {/* Floating Particles */}
                 <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 animate-pulse"></div>
-                <div className="absolute bottom-6 left-6 w-1 h-1 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-              </div>
-            ))}
+                <div className="absolute bottom-6 left-6 w-1 h-1 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 animate-pulse" style={{
+              animationDelay: '0.5s'
+            }}></div>
+              </div>)}
           </div>
 
           {/* CTA Section */}
@@ -423,8 +345,8 @@ const Index = () => {
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 left-0 w-full h-full" style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-                }}></div>
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+              }}></div>
               </div>
               
               <div className="relative z-10 text-center max-w-4xl mx-auto">
@@ -454,24 +376,15 @@ const Index = () => {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    onClick={handleWhatsAppContact} 
-                    className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-                  >
+                  <Button onClick={handleWhatsAppContact} className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                     <Phone className="mr-2 h-5 w-5" />
                     WhatsApp: 07060737554
                   </Button>
-                  <Button 
-                    onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} 
-                    className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-                  >
+                  <Button onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                     <Mail className="mr-2 h-5 w-5" />
                     Email Us Now
                   </Button>
-                  <Button 
-                    onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} 
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-                  >
+                  <Button onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                     <MapPin className="mr-2 h-5 w-5" />
                     Visit Our Office
                   </Button>
