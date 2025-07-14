@@ -126,7 +126,7 @@ const Index = () => {
               {/* Badge */}
               <div className="inline-flex items-center px-6 py-3 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30 animate-fade-in">
                 <Users className="w-5 h-5 text-primary mr-3" />
-                <span className="text-sm font-semibold text-primary">Training & Tech Solutions</span>
+                <span className="text-sm font-semibold text-white">Training & Tech Solutions</span>
               </div>
 
               {/* Main Heading */}
