@@ -65,6 +65,76 @@ const Index = () => {
     window.open('https://forms.gle/RK3tUktPKBMNDbZz7', '_blank');
   };
   return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Structured Data for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Jet Consults",
+          "url": "https://817e1dba-4f38-4f27-a231-ab3bc1f3d48f.lovableproject.com",
+          "logo": "https://817e1dba-4f38-4f27-a231-ab3bc1f3d48f.lovableproject.com/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png",
+          "description": "Leading IT training institute in Nigeria offering Python, JavaScript, AI, React.js, Cybersecurity courses. We also provide custom software development, mobile apps, and IT installation services.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "NG"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+2347060737554",
+            "contactType": "Customer Service"
+          },
+          "sameAs": [
+            "https://wa.me/2347060737554"
+          ],
+          "offers": [
+            {
+              "@type": "Course",
+              "name": "Python Programming Training",
+              "description": "Comprehensive Python programming bootcamp from beginner to advanced levels",
+              "provider": {
+                "@type": "Organization",
+                "name": "Jet Consults"
+              }
+            },
+            {
+              "@type": "Course",
+              "name": "JavaScript Development Training",
+              "description": "Modern JavaScript development training including React.js and frameworks",
+              "provider": {
+                "@type": "Organization",
+                "name": "Jet Consults"
+              }
+            },
+            {
+              "@type": "Course",
+              "name": "AI & Machine Learning Training",
+              "description": "Artificial Intelligence and Machine Learning courses for all levels",
+              "provider": {
+                "@type": "Organization",
+                "name": "Jet Consults"
+              }
+            },
+            {
+              "@type": "Course",
+              "name": "Cybersecurity Training",
+              "description": "Comprehensive cybersecurity training and certification programs",
+              "provider": {
+                "@type": "Organization",
+                "name": "Jet Consults"
+              }
+            }
+          ],
+          "serviceType": [
+            "IT Training",
+            "Software Development",
+            "Mobile App Development",
+            "Web Development",
+            "IT Installation Services",
+            "Computer Training"
+          ]
+        })}
+      </script>
+      
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
