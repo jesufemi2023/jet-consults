@@ -68,71 +68,57 @@ const Index = () => {
       {/* Structured Data for SEO */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Jet Consults",
-          "url": "https://817e1dba-4f38-4f27-a231-ab3bc1f3d48f.lovableproject.com",
-          "logo": "https://817e1dba-4f38-4f27-a231-ab3bc1f3d48f.lovableproject.com/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png",
-          "description": "Leading IT training institute in Nigeria offering Python, JavaScript, AI, React.js, Cybersecurity courses. We also provide custom software development, mobile apps, and IT installation services.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "NG"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+2347060737554",
-            "contactType": "Customer Service"
-          },
-          "sameAs": [
-            "https://wa.me/2347060737554"
-          ],
-          "offers": [
-            {
-              "@type": "Course",
-              "name": "Python Programming Training",
-              "description": "Comprehensive Python programming bootcamp from beginner to advanced levels",
-              "provider": {
-                "@type": "Organization",
-                "name": "Jet Consults"
-              }
-            },
-            {
-              "@type": "Course",
-              "name": "JavaScript Development Training",
-              "description": "Modern JavaScript development training including React.js and frameworks",
-              "provider": {
-                "@type": "Organization",
-                "name": "Jet Consults"
-              }
-            },
-            {
-              "@type": "Course",
-              "name": "AI & Machine Learning Training",
-              "description": "Artificial Intelligence and Machine Learning courses for all levels",
-              "provider": {
-                "@type": "Organization",
-                "name": "Jet Consults"
-              }
-            },
-            {
-              "@type": "Course",
-              "name": "Cybersecurity Training",
-              "description": "Comprehensive cybersecurity training and certification programs",
-              "provider": {
-                "@type": "Organization",
-                "name": "Jet Consults"
-              }
-            }
-          ],
-          "serviceType": [
-            "IT Training",
-            "Software Development",
-            "Mobile App Development",
-            "Web Development",
-            "IT Installation Services",
-            "Computer Training"
-          ]
-        })}
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Jet Consults",
+        "url": "https://817e1dba-4f38-4f27-a231-ab3bc1f3d48f.lovableproject.com",
+        "logo": "https://817e1dba-4f38-4f27-a231-ab3bc1f3d48f.lovableproject.com/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png",
+        "description": "Leading IT training institute in Nigeria offering Python, JavaScript, AI, React.js, Cybersecurity courses. We also provide custom software development, mobile apps, and IT installation services.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NG"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+2347060737554",
+          "contactType": "Customer Service"
+        },
+        "sameAs": ["https://wa.me/2347060737554"],
+        "offers": [{
+          "@type": "Course",
+          "name": "Python Programming Training",
+          "description": "Comprehensive Python programming bootcamp from beginner to advanced levels",
+          "provider": {
+            "@type": "Organization",
+            "name": "Jet Consults"
+          }
+        }, {
+          "@type": "Course",
+          "name": "JavaScript Development Training",
+          "description": "Modern JavaScript development training including React.js and frameworks",
+          "provider": {
+            "@type": "Organization",
+            "name": "Jet Consults"
+          }
+        }, {
+          "@type": "Course",
+          "name": "AI & Machine Learning Training",
+          "description": "Artificial Intelligence and Machine Learning courses for all levels",
+          "provider": {
+            "@type": "Organization",
+            "name": "Jet Consults"
+          }
+        }, {
+          "@type": "Course",
+          "name": "Cybersecurity Training",
+          "description": "Comprehensive cybersecurity training and certification programs",
+          "provider": {
+            "@type": "Organization",
+            "name": "Jet Consults"
+          }
+        }],
+        "serviceType": ["IT Training", "Software Development", "Mobile App Development", "Web Development", "IT Installation Services", "Computer Training"]
+      })}
       </script>
       
       {/* Header */}
@@ -143,49 +129,30 @@ const Index = () => {
             <div className="flex items-center space-x-3">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <img 
-                  src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" 
-                  alt="Jet Consults Logo" 
-                  className="relative h-11 w-auto bg-white rounded-xl p-2 shadow-md border border-border/20 transition-all duration-300 group-hover:scale-105" 
-                />
+                <img src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" alt="Jet Consults Logo" className="relative h-11 w-auto bg-white rounded-xl p-2 shadow-md border border-border/20 transition-all duration-300 group-hover:scale-105" />
               </div>
-              <div className="hidden sm:block">
-                <h1 className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent tracking-tight">Jet Consults</h1>
-                <p className="text-xs text-muted-foreground/80 -mt-0.5 font-medium">Professional IT Solutions</p>
-              </div>
+              
             </div>
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center">
               <div className="flex items-center space-x-1 bg-accent/30 rounded-2xl p-1.5 backdrop-blur-sm border border-border/20">
-                <a 
-                  href="#services" 
-                  className="relative px-5 py-2.5 text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-white/80 hover:shadow-sm group"
-                >
+                <a href="#services" className="relative px-5 py-2.5 text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-white/80 hover:shadow-sm group">
                   Services
                   <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-4"></div>
                 </a>
-                <a 
-                  href="#training" 
-                  className="relative px-5 py-2.5 text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-white/80 hover:shadow-sm group"
-                >
+                <a href="#training" className="relative px-5 py-2.5 text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-white/80 hover:shadow-sm group">
                   Training
                   <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-4"></div>
                 </a>
-                <a 
-                  href="#contact" 
-                  className="relative px-5 py-2.5 text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-white/80 hover:shadow-sm group"
-                >
+                <a href="#contact" className="relative px-5 py-2.5 text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-white/80 hover:shadow-sm group">
                   Contact
                   <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-4"></div>
                 </a>
               </div>
               
               <div className="ml-6">
-                <button 
-                  onClick={handleWhatsAppContact}
-                  className="relative group px-8 py-3 bg-gradient-to-r from-primary to-primary/90 text-primary-foreground text-sm font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/25 hover:scale-105 active:scale-95 overflow-hidden"
-                >
+                <button onClick={handleWhatsAppContact} className="relative group px-8 py-3 bg-gradient-to-r from-primary to-primary/90 text-primary-foreground text-sm font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/25 hover:scale-105 active:scale-95 overflow-hidden">
                   <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   <span className="relative flex items-center space-x-2">
                     <Zap className="w-4 h-4" />
@@ -196,11 +163,7 @@ const Index = () => {
             </nav>
             
             {/* Mobile Menu Button */}
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)} 
-              className="lg:hidden relative group p-3 rounded-2xl text-foreground/70 hover:text-foreground hover:bg-accent/50 transition-all duration-300 hover:scale-105 active:scale-95 border border-border/20 backdrop-blur-sm" 
-              aria-label="Toggle menu"
-            >
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden relative group p-3 rounded-2xl text-foreground/70 hover:text-foreground hover:bg-accent/50 transition-all duration-300 hover:scale-105 active:scale-95 border border-border/20 backdrop-blur-sm" aria-label="Toggle menu">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               {isMenuOpen ? <X className="relative h-5 w-5" /> : <Menu className="relative h-5 w-5" />}
             </button>
@@ -208,15 +171,10 @@ const Index = () => {
         </div>
         
         {/* Mobile Navigation Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-2xl border-b border-border/20 shadow-2xl shadow-black/10">
+        {isMenuOpen && <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-2xl border-b border-border/20 shadow-2xl shadow-black/10">
             <nav className="max-w-7xl mx-auto px-6 py-8">
               <div className="space-y-2">
-                <a 
-                  href="#services" 
-                  className="flex items-center justify-between px-6 py-4 text-base font-semibold text-foreground/80 hover:text-foreground hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 rounded-2xl transition-all duration-300 group border border-transparent hover:border-border/20" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                <a href="#services" className="flex items-center justify-between px-6 py-4 text-base font-semibold text-foreground/80 hover:text-foreground hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 rounded-2xl transition-all duration-300 group border border-transparent hover:border-border/20" onClick={() => setIsMenuOpen(false)}>
                   <div className="flex items-center space-x-4">
                     <div className="p-2 bg-primary/10 rounded-xl">
                       <Code className="h-5 w-5 text-primary" />
@@ -226,11 +184,7 @@ const Index = () => {
                   <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
                 </a>
                 
-                <a 
-                  href="#training" 
-                  className="flex items-center justify-between px-6 py-4 text-base font-semibold text-foreground/80 hover:text-foreground hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 rounded-2xl transition-all duration-300 group border border-transparent hover:border-border/20" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                <a href="#training" className="flex items-center justify-between px-6 py-4 text-base font-semibold text-foreground/80 hover:text-foreground hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 rounded-2xl transition-all duration-300 group border border-transparent hover:border-border/20" onClick={() => setIsMenuOpen(false)}>
                   <div className="flex items-center space-x-4">
                     <div className="p-2 bg-secondary/10 rounded-xl">
                       <GraduationCap className="h-5 w-5 text-secondary" />
@@ -240,11 +194,7 @@ const Index = () => {
                   <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-secondary transition-colors" />
                 </a>
                 
-                <a 
-                  href="#contact" 
-                  className="flex items-center justify-between px-6 py-4 text-base font-semibold text-foreground/80 hover:text-foreground hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 rounded-2xl transition-all duration-300 group border border-transparent hover:border-border/20" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                <a href="#contact" className="flex items-center justify-between px-6 py-4 text-base font-semibold text-foreground/80 hover:text-foreground hover:bg-gradient-to-r hover:from-primary/5 hover:to-secondary/5 rounded-2xl transition-all duration-300 group border border-transparent hover:border-border/20" onClick={() => setIsMenuOpen(false)}>
                   <div className="flex items-center space-x-4">
                     <div className="p-2 bg-accent/10 rounded-xl">
                       <MessageCircle className="h-5 w-5 text-accent" />
@@ -256,20 +206,16 @@ const Index = () => {
               </div>
               
               <div className="mt-8 pt-6 border-t border-border/20">
-                <button 
-                  onClick={() => {
-                    handleWhatsAppContact();
-                    setIsMenuOpen(false);
-                  }}
-                  className="w-full px-6 py-4 bg-gradient-to-r from-primary to-primary/90 text-primary-foreground text-base font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/25 hover:scale-[1.02] active:scale-98 flex items-center justify-center space-x-3"
-                >
+                <button onClick={() => {
+              handleWhatsAppContact();
+              setIsMenuOpen(false);
+            }} className="w-full px-6 py-4 bg-gradient-to-r from-primary to-primary/90 text-primary-foreground text-base font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/25 hover:scale-[1.02] active:scale-98 flex items-center justify-center space-x-3">
                   <Zap className="w-5 h-5" />
                   <span>Get Started Now</span>
                 </button>
               </div>
             </nav>
-          </div>
-        )}
+          </div>}
       </header>
 
       {/* Hero Section */}
