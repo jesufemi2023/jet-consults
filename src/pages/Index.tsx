@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, ExternalLink, Code, Smartphone, Monitor, Shield, GraduationCap, BarChart3, Menu, X, Zap, Users, Award } from 'lucide-react';
+import { Phone, Mail, MapPin, ExternalLink, Code, Smartphone, Monitor, Shield, GraduationCap, BarChart3, Menu, X, Zap, Users, Award, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import heroImage from '@/assets/hero-tech-training.jpg';
@@ -136,41 +136,110 @@ const Index = () => {
       </script>
       
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-3">
-              <img src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" alt="Jet Consults Logo" className="h-10 w-auto bg-white rounded-md p-1" />
+      <header className="bg-white/95 backdrop-blur-xl border-b border-border/20 sticky top-0 z-50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-6">
+            {/* Logo and Brand */}
+            <div className="flex items-center space-x-4">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/5d578760-7f51-410f-b369-1c96928d3d1c.png" 
+                  alt="Jet Consults Logo" 
+                  className="h-12 w-auto bg-white rounded-lg p-2 shadow-sm border border-border/10 transition-transform hover:scale-105" 
+                />
+              </div>
+              <div className="hidden sm:block">
+                <h1 className="text-xl font-bold text-foreground tracking-tight">Jet Consults</h1>
+                <p className="text-sm text-muted-foreground -mt-1">IT Training & Solutions</p>
+              </div>
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
-              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
-              <a href="#training" className="text-gray-700 hover:text-blue-600 transition-colors">Training</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+            <nav className="hidden md:flex items-center space-x-1">
+              <a 
+                href="#services" 
+                className="relative px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-all duration-300 rounded-lg hover:bg-accent/50 group"
+              >
+                Services
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+              </a>
+              <a 
+                href="#training" 
+                className="relative px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-all duration-300 rounded-lg hover:bg-accent/50 group"
+              >
+                Training
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+              </a>
+              <a 
+                href="#contact" 
+                className="relative px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-all duration-300 rounded-lg hover:bg-accent/50 group"
+              >
+                Contact
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+              </a>
+              <div className="ml-4 pl-4 border-l border-border/20">
+                <button 
+                  onClick={handleWhatsAppContact}
+                  className="px-6 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105 active:scale-95"
+                >
+                  Get Started
+                </button>
+              </div>
             </nav>
             
             {/* Mobile Menu Button */}
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
+              className="md:hidden p-2.5 rounded-lg text-foreground/70 hover:text-foreground hover:bg-accent/50 transition-all duration-300 hover:scale-105 active:scale-95" 
+              aria-label="Toggle menu"
+            >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
         
         {/* Mobile Navigation Menu */}
-        {isMenuOpen && <div className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md">
-            <nav className="max-w-7xl mx-auto px-4 py-4 space-y-3">
-              <a href="#services" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-border/20 bg-white/98 backdrop-blur-xl shadow-lg">
+            <nav className="max-w-7xl mx-auto px-4 py-6 space-y-1">
+              <a 
+                href="#services" 
+                className="flex items-center px-4 py-3 text-base font-medium text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all duration-300" 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Code className="h-5 w-5 mr-3 text-primary" />
                 Services
               </a>
-              <a href="#training" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>
+              <a 
+                href="#training" 
+                className="flex items-center px-4 py-3 text-base font-medium text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all duration-300" 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <GraduationCap className="h-5 w-5 mr-3 text-primary" />
                 Training
               </a>
-              <a href="#contact" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>
+              <a 
+                href="#contact" 
+                className="flex items-center px-4 py-3 text-base font-medium text-foreground/80 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all duration-300" 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <MessageCircle className="h-5 w-5 mr-3 text-primary" />
                 Contact
               </a>
+              <div className="pt-4 border-t border-border/20 mt-4">
+                <button 
+                  onClick={() => {
+                    handleWhatsAppContact();
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full px-4 py-3 bg-primary text-primary-foreground text-base font-medium rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-sm hover:shadow-md"
+                >
+                  Get Started
+                </button>
+              </div>
             </nav>
-          </div>}
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
