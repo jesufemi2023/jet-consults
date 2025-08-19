@@ -490,18 +490,18 @@ const Index = () => {
                   </div>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button onClick={handleWhatsAppContact} className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                    <Phone className="mr-2 h-5 w-5" />
-                    WhatsApp: 07060737554
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                  <Button onClick={handleWhatsAppContact} className="w-full sm:w-auto bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl min-w-0">
+                    <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                    <span className="truncate">WhatsApp: 07060737554</span>
                   </Button>
-                  <Button onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                    <Mail className="mr-2 h-5 w-5" />
-                    Email Us Now
+                  <Button onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl min-w-0">
+                    <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                    <span className="truncate">Email Us Now</span>
                   </Button>
-                  <Button onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                    <MapPin className="mr-2 h-5 w-5" />
-                    Visit Our Office
+                  <Button onClick={() => window.open('https://maps.google.com/?q=Federal+Housing+Ado+Ekiti+State+Nigeria', '_blank')} className="w-full sm:w-auto bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl min-w-0">
+                    <MapPin className="mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                    <span className="truncate">Visit Our Office</span>
                   </Button>
                 </div>
               </div>
