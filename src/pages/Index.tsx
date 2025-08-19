@@ -438,7 +438,7 @@ const Index = () => {
                           <Phone className="mr-2 h-4 w-4" />
                           Get Free Quote
                         </Button>
-                        <Button onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} variant="outline" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg transition-all duration-300">
+                        <Button onClick={() => window.location.href = 'mailto:consultsjet@gmail.com'} variant="outline" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg transition-all duration-300">
                           <Mail className="mr-2 h-4 w-4" />
                           Discuss Project
                         </Button>
@@ -495,7 +495,7 @@ const Index = () => {
                     <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                     <span className="truncate">WhatsApp: 07060737554</span>
                   </Button>
-                  <Button onClick={() => window.location.href = 'mailto:jesufemitemitope@gmail.com'} className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl min-w-0">
+                  <Button onClick={() => window.location.href = 'mailto:consultsjet@gmail.com'} className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl min-w-0">
                     <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                     <span className="truncate">Email Us Now</span>
                   </Button>
@@ -567,7 +567,7 @@ const Index = () => {
               <Mail className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h4 className="text-xl font-semibold mb-2">Email</h4>
               <p className="text-gray-300 mb-4">Send us your project details</p>
-              <a href="mailto:ogungbetemitope@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors">consultsjet@gmail.com</a>
+              <a href="mailto:consultsjet@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors">consultsjet@gmail.com</a>
             </div>
 
             <div className="text-center p-8 bg-gray-800 rounded-xl hover:bg-gray-700 transition-colors duration-300">
