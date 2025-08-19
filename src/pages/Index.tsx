@@ -533,7 +533,7 @@ const Index = () => {
             <div className="bg-white rounded-2xl p-8 shadow-xl max-w-2xl mx-auto">
               <h4 className="text-2xl font-bold text-gray-900 mb-4">Ready to Start Your IT Journey?</h4>
               <p className="text-gray-600 mb-6">
-                Join hundreds of successful graduates who have transformed their careers through our expert-led training programs.
+                Join our growing community of aspiring tech professionals and start your journey to transform your career through our expert-led training programs.
               </p>
               <Button onClick={handleTrainingRegistration} className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center text-xl">
                 Register Now!!!
